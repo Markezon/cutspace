@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Global Opt</title>	
+
+	<link
+		rel="stylesheet"
+		href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+	/>
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+
+	<div class="menu">
+		<div class="menu__block">
+			<div class="menu__close">
+				<svg width="29" height="30" viewBox="0 0 29 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M17.1568 14.5231L28.4489 3.23075C29.1837 2.49623 29.1837 1.30861 28.4489 0.574085C27.7144 -0.160437 26.5267 -0.160437 25.7922 0.574085L14.4998 11.8665L3.20781 0.574085C2.47295 -0.160437 1.28567 -0.160437 0.551149 0.574085C-0.183716 1.30861 -0.183716 2.49623 0.551149 3.23075L11.8432 14.5231L0.551149 25.8155C-0.183716 26.55 -0.183716 27.7376 0.551149 28.4721C0.917206 28.8385 1.39852 29.0226 1.87948 29.0226C2.36045 29.0226 2.84141 28.8385 3.20781 28.4721L14.4998 17.1798L25.7922 28.4721C26.1586 28.8385 26.6396 29.0226 27.1205 29.0226C27.6015 29.0226 28.0825 28.8385 28.4489 28.4721C29.1837 27.7376 29.1837 26.55 28.4489 25.8155L17.1568 14.5231Z" fill="black"/>
+				</svg>
+			</div>
+			
+			<nav>
+                <ul class="menu__list">
+                    <li class="menu__link"><a href="#pr">Преимущества</a></li>
+                    <li class="menu__link"><a href="#wo">Наша работа</a></li>
+                    <li class="menu__link"><a href="#pri">Цены</a></li>
+                    <li class="menu__link"><a href="#sch">Схема работы</a></li>
+                    <li class="menu__link"><a href="#re">Отзывы</a></li>
+                    <li class="menu__link"><a href="#co">Контакты</a></li>
+                </ul>
+            </nav>
+		</div>
+		<div class="menu__overlay overlay__close"></div>
+	</div>
+
+
+
+	<div class="overlay">
+		<div class="modal" id="consultation">
+			<div class="modal__close">&times;</div>
+			<div class="modal__subtitle">Заполните форму заявки</div>
+			<div class="modal__descr">и мы перезвоним вам в течении 10 минут</div>
+			<form action="#" class="form form__modal" method="POST">
+				<div class="form__item form__item-name">
+					<input class="input input-name" type="text" data-validate-field="name" name="Имя" placeholder="Введите имя">
+				</div>
+				<div class="form__item form__item-mail">
+					<input class="input input-mail" type="email" data-validate-field="email" name="Email"
+					placeholder="Введите email">
+				</div>
+				<div class="form__item form__item-tel">
+					<input class="input input-tel" type="tel" data-validate-field="tel" name="Телефон"
+					placeholder="Введите телефон">
+				</div>
+				<div class="form__btn form__btn-modal">
+					<button class="btn button_submit">Отправить заявку</button>
+				</div>
+				<div class="form__policy form__policy-modal">
+					<input id="formAgreement" checked type="checkbox" name="agreement" class="form__policy-input input-policy">
+					<label for="formAgreement" class="form__policy-label"><span><font color="red">*</font>I Agree to <a href="/policy.html">Privacy Policy</a></span></label>
+				</div> 				
+			</form>
+		</div>
+
+		<div class="modal modal_mini" id="thanks">
+			<div class="modal__close">&times;</div>
+			<div class="modal__subtitle">Спасибо за вашу заявку!</div>
+			<div class="modal__descr">Наш менеджер свяжется с вами 
+				в ближайшее время!</div>
+		</div>
+	</div>	
+
+    <a href="#up" class="pageup">
+		<img src="icons/up-del.svg" alt="up">
+	</a>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.2.1/jquery-migrate.min.js"></script>
+	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/just-validate3.3.3.min.js"></script>
+    <script src="js/inputmask.min.js"></script>
+    <script src="js/gsap.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>

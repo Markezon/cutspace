@@ -1,0 +1,31 @@
+@import 'libs/bootstrap-reboot.min';
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@300;400;700&display=swap');
+
+@import 'base/variables';
+@import 'base/mixins';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}
+
+p {
+    margin: 0ch
+}
+
+@import 'blocks/title';
+@import 'blocks/button';
+@import 'blocks/menu';
+@import 'blocks/pageup';
+@import 'blocks/form';
+@import 'blocks/footer';
+@import 'blocks/policy';
+@import 'blocks/modal';
+@import 'blocks/media';
+
+
