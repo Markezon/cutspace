@@ -1,0 +1,27 @@
+.share {
+    margin-top: 100px;
+    &__company {
+        height: 42px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__wrapper {
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: 772px 550px;
+        column-gap: 80px;
+    }
+    &__item1 {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item2 {
+        padding: 100px 0;
+        &_title {
+            text-align: center;
+        }
+        &_subtitle {
+            margin: 20px 0 40px 0;
+        }
+    }
+}
