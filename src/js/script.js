@@ -1,4 +1,69 @@
-console.log('Init!');
+const menu = document.querySelector('.nav'),
+			burger = document.querySelector('.burger'),
+			mobileBack = document.querySelector('.mobile-back'),
+			overlay = document.querySelector('.overlay');
+
+const lockScroll = () => {
+	document.body.classList.add('lock');
+}
+
+const unlockScroll = () => {
+	document.body.classList.remove('lock');
+}
+
+const initialMenu = () => {
+	document.querySelector('.nav__list--dropdown').classList.remove('transformation');
+	document.querySelector('.nav').querySelector('.nav__list').classList.remove('transformation');
+	scrollTop();
+}
+
+const scrollTop = () => {
+	menu.scrollTo({
+		top: 0,
+		behavior: 'smooth',
+	});
+}
+
+burger.addEventListener('click', () => {
+	menu.classList.add('open');
+	overlay.classList.add('open');
+	lockScroll();
+	initialMenu();
+});
+
+overlay.addEventListener('click', () => {
+	menu.classList.remove('open');
+	overlay.classList.remove('open');
+	unlockScroll();
+});
+
+menu.addEventListener('click', (e) => {
+	if (e.target.classList.contains('nav__link--drop')) {
+		e.preventDefault();
+		e.target.closest('.nav__list').classList.add('transformation');
+		e.target.closest('.nav__item').querySelector('.nav__list--dropdown').classList.add('transformation');
+		scrollTop();
+	}
+
+	if (e.target.classList.contains('mobile-back__link')) {
+		e.preventDefault();
+		e.target.closest('.nav__list--dropdown').classList.remove('transformation');
+		e.target.closest('.nav').querySelector('.nav__list').classList.remove('transformation');
+		scrollTop();
+	}
+
+	if (e.target.classList.contains('nav__link') && !e.target.classList.contains('nav__link--drop')) {
+		e.preventDefault();
+		menu.classList.remove('open');
+		overlay.classList.remove('open');
+		unlockScroll();
+	}
+});
+
+
+
+
+
 
 // inputmask
 const form = document.querySelector('.form');
@@ -31,7 +96,7 @@ validation
       value: true,
       errorMessage: 'Please agree'
     }
-    ])
+	])
   .addField('.input-mail', [
     {
       rule: 'required',
@@ -81,109 +146,3 @@ validation
     event.target.reset();
   });
 
-
-  
-  const slider = document.querySelector('.swiper-container');
-
-  let swiper = new Swiper('.swiper', {
-    slidesPerView: 1,
-    loop: true,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    breakpoints: {
-      992: {
-        slidesPerView: 3,
-        centeredSlides: true,
-        spaceBetween: 50,
-      }
-    },
-  });
-
-  //hamburger
-
-  const hamburger = document.querySelector('.hamburger'),
-	menu = document.querySelector('.menu'),
-	closeElem = document.querySelector('.menu__close'),
-  closeElem2 = document.querySelector('.overlay__close');
-
-  hamburger.addEventListener('click', () => {
-    menu.classList.add('active'),
-    hamburger.classList.add('rotate');
-  });
-
-  closeElem.addEventListener('click', () => {
-    menu.classList.remove('active'),
-    hamburger.classList.remove('rotate');
-  });
-
-  closeElem2.addEventListener('click', () => {
-    menu.classList.remove('active'),
-    hamburger.classList.remove('rotate');
-  });
-
-
-
-  
-
-$(document).ready(function(){
-
-
-  function toggleSlide(item) {
-    $(item).each(function(i) {
-      $(this).on('click', function(e) {
-        e.preventDefault();
-        $('.rates__item-first').eq(i).toggleClass('rates__item-first_active');
-        $('.rates__item-second').eq(i).toggleClass('rates__item-second_active');
-      })
-    });
-  };
-
-  toggleSlide('.rates__item-btn');
-  toggleSlide('.rates__item-btnback');
-
-
-  //Modal
-
-	$('[data-modal=consultation]').on('click', function() {
-		$('.overlay, #consultation').fadeIn('slow');
-	});
-	$('.modal__close').on('click', function() {
-		$('.overlay, #consultation, #thanks').fadeOut('slow');
-	});
-
-
-
-  //scroll
-
-  $(window).scroll(function() {
-		if ($(this).scrollTop() > 1000) {
-			$('.pageup').fadeIn();
-		} else {
-			$('.pageup').fadeOut();
-		}
-	});
-	
-	$("a[href^='#']").click(function(){
-		const _href = $(this).attr("href");
-		$("html, body").animate({scrollTop: $(_href).offset().top+"px"});
-		return false;
-	});
-
-	$("a[href^='#']").click(function(){
-		const _href = $(this).attr("href");
-		$("html, body").animate({scrollTop: $(_href).offset().top+"px"});
-		return false;
-	});
-
-});
-  
-  
-  
-  
-  

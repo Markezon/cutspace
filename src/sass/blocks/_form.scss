@@ -1,12 +1,11 @@
 .form {
-    width: 815px;
     display: grid;
     margin: 0 auto;
-    grid-template-columns: repeat(3, 270px);
-    grid-template-rows: 47px 75px 60px;
-    row-gap: 6px;
+    grid-template-columns: 300px;
+    grid-template-rows: 45px 45px 45px 45px;
+    row-gap: 15px;
     column-gap: 4px;
-    justify-content: space-between;
+    justify-content: center;
     &__modal {
         margin-top: 20px;
         width: 280px;
@@ -16,18 +15,6 @@
     }
     &__item {
         position: relative;
-/*         &-name {
-            grid-row: 1 / 2;
-            grid-column: 1 / 2;
-        }
-        &-mail {
-            grid-row: 2 / 3;
-            grid-column: 1 / 2;
-        }
-        &-tel {
-            grid-row: 3 / 4;
-            grid-column: 1 / 2;
-        } */
         .input {
             outline: 0;
             width: 100%;
@@ -55,7 +42,6 @@
         }
     }
     &__textarea {
-        grid-column: 1 / 4;
         .textarea {
             outline: 0;
             width: 100%;
@@ -75,7 +61,6 @@
         display: none;
     }
     &__btn {
-        grid-column: 2 / 3;
         display: block;
         margin: 0 auto;
         width: 180px;
@@ -86,8 +71,6 @@
         }
     }
     &__policy {
-        grid-column: 3 / 4;
-        grid-row: 2 / 3;
         position: relative;
         margin-left: 30px;
         margin-top: 5px;

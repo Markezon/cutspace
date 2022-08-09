@@ -1,0 +1,29 @@
+.find {
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item {
+        width: 540px;
+        &_title {
+            margin-top: 125px;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 46px;
+            line-height: 65px;
+            letter-spacing: 0.8px;
+            color: #323232;
+        }
+        &_subtitle {
+            margin: 25px 0 40px 0;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 27px;
+            letter-spacing: 1.15px;
+            color: #323232;
+        }
+    }
+    
+}
