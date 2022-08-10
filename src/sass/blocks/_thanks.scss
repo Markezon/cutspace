@@ -1,0 +1,70 @@
+.thanks {
+    min-height: 725px;
+    background-color: #F5F6FA;
+    padding-top: 100px;
+    margin-top: 50px;
+    &__header {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__title {
+        width: 455px;
+        height: 130px;
+    }
+    &__subtitle {
+        margin-top: 30px;
+        width: 400px;
+        height: 60px;
+    }
+}
+
+.swiper-slide {
+    position: relative;
+    height: 425px;
+    &__descr {
+        margin-top: 30px;
+        padding: 0 29px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 27px;
+        letter-spacing: 1.15px;
+        color: #323232;
+    }
+    &__title {
+        padding: 0 29px;
+        margin-top: 23px;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 27px;
+        letter-spacing: 0.6px;
+        color: #323232;        
+    }
+    &__subtitle {
+        padding: 0 29px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 27px;
+        letter-spacing: 1.15px;
+        color: #58BEBF;        
+    }
+}
+
+.swiper-slide.swiper-slide-active {
+    background-color: #fff;
+    box-shadow: 0px 10px 52px rgba(0, 0, 0, 0.08);
+    border-radius: 0px 0px 5px 5px;
+    .swiper-slide__subtitle {
+        color: $main-color;        
+    }
+    &:before {
+        content: '';
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        background: url("../../icons/thanks/Play\ btn.png") no-repeat fixed center;  
+        position: absolute;
+        top: 145px;
+        right: 10px;
+    }
+
+}
