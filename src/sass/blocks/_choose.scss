@@ -1,0 +1,64 @@
+.choose {
+    margin-top: 110px;
+    &__title {
+        text-align: center;
+    }
+    &__wrapper {
+        margin-top: 58px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item {
+        width: 250px;
+        height: 185px;
+        text-align: center;
+
+        &:hover {
+            .choose__item_circle {
+                transition: all 1s;
+                background-color: $main-color;
+            }
+            .choose__item_icon {
+                svg path {
+                    transition: all 1s;
+                    fill: #fff;
+                }
+                svg ellipse {
+                    transition: all 1s;
+                    fill: #fff;
+                }
+            }
+        }
+        &_circle {
+            position: relative;
+            height: 70px;
+            width: 70px;
+            background: rgba(88, 190, 191, 0.2);
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 15px;
+        }
+        &_icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%);
+
+        }
+        &_title {
+            font-weight: 700;
+            font-size: 28px;
+            line-height: 42px;
+            letter-spacing: 0.5px;
+            color: #323232;
+        }
+        &_subtitle {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 27px;
+            letter-spacing: 1.15px;
+            color: #323232;
+        }
+    }
+}
