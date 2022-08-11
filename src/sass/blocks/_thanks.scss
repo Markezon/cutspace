@@ -16,6 +16,26 @@
         width: 400px;
         height: 60px;
     }
+    &__cutspace {
+        position: relative;
+        &:before {
+            content: '';
+            height: 80px;
+            width: 80px;
+            border-radius: 50%;
+            background: url("../../icons/thanks/Shape.png") no-repeat center; 
+            position: absolute;
+            top: -40px;
+            right: -40px;
+            z-index: 99;
+        }
+        
+    }
+}
+
+.swiper {
+    position: relative;
+    margin-top: 58px;
 }
 
 .swiper-slide {
@@ -61,7 +81,7 @@
         height: 50px;
         width: 50px;
         border-radius: 50%;
-        background: url("../../icons/thanks/Play\ btn.png") no-repeat fixed center;  
+        background: url("../../icons/thanks/Playbtn.png") no-repeat center;  
         position: absolute;
         top: 145px;
         right: 10px;
