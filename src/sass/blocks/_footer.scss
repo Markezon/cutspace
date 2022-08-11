@@ -1,0 +1,41 @@
+.footer {
+    padding-top: 50px;
+    min-height: 270px;
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 500px 160px 150px 150px;
+        justify-content: space-between;
+    }
+    &__item {
+        &_text {
+            margin-top: 15px;
+            padding-right: 200px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 27px;
+            letter-spacing: 1.15px;
+            color: #323232;
+        }
+        &_social {
+            margin-top: 40px;
+            width: 184px;
+            display: flex;
+            justify-content: space-between;
+        }
+        &_title {
+            font-weight: 700;
+            font-size: 21px;
+            line-height: 32px;
+            letter-spacing: 0.5px;
+            color: #323232;
+            margin-bottom: 18px;
+        }
+        &_link {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 35px;
+            letter-spacing: 0.5px;
+            color: #323232;
+        }
+    }
+}
