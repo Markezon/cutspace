@@ -156,8 +156,8 @@ validation
     slidesPerView: 3,
     spaceBetween: 30,
     centeredSlides: true,
-/*     autoplay: {
-      delay: 5000,
-    }, */
+    autoplay: {
+      delay: 3000,
+    },
   
   });
