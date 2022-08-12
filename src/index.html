@@ -25,10 +25,10 @@
 				<nav class="nav header__nav">
 					<ul class="nav__list">
 						<li class="nav__item"><a href="#" class="nav__link">Home</a></li>
-						<li class="nav__item"><a href="#" class="nav__link">About us</a></li>
-						<li class="nav__item"><a href="#" class="nav__link">Find space</a></li>
-						<li class="nav__item"><a href="#" class="nav__link">Share space</a></li>
-						<li class="nav__item"><a href="#" class="nav__link">Promote space</a></li>
+						<li class="nav__item"><a href="#abo" class="nav__link">About us</a></li>
+						<li class="nav__item"><a href="#fin" class="nav__link">Find space</a></li>
+						<li class="nav__item"><a href="#sha" class="nav__link">Share space</a></li>
+						<li class="nav__item"><a href="#pro" class="nav__link">Promote space</a></li>
 						
 					</ul>
 				</nav>
@@ -41,7 +41,7 @@
 		</div>
 	</section>
 
-	<section class="find">
+	<section id="fin" class="find">
 		<div class="container">
 			<div class="find__wrapper">
 				<div class="find__item">
@@ -80,7 +80,7 @@
 		</div>
 	</section>
 
-	<section class="share">
+	<section id="sha" class="share">
 		<div class="container">
 			<div class="share__company">
 				<img src="icons/share/1.svg" alt="company1" class="share__company_logo">
@@ -91,8 +91,8 @@
 		</div>
 		<div class="share__wrapper">
 			<div class="share__item1">
-				<img src="img/share/chair.png" alt="chair" class="share__item_img">
-				<img src="img/share/waves.png" alt="waves" class="share__item_img">
+				<img src="img/share/chair.png" alt="chair" class="share__item_img chair">
+				<img src="img/share/waves.png" alt="waves" class="share__item_img waves">
 				<div class="share__message">
 					<div class="share__message_img">
 						<img src="icons/share/building.svg" alt="building" class="share__message_icon">
@@ -127,7 +127,7 @@
 		<div class="container">
 			<div class="start__wrapper">
 				<div class="start__item1">
-					<img src="img/start/Image.png" alt="example" class="start__item_img">
+					<img src="img/start/Image.png" alt="example" class="start__item1_img">
 				</div>
 				<div class="start__item2">
 					<div class="start__item2__title title">
@@ -250,7 +250,7 @@
 		</div>
 	</section>
 
-	<section class="thanks">
+	<section id="pro" class="thanks">
 		<div class="container">
 			<div class="thanks__header">
 				<div class="thanks__title title">
@@ -328,7 +328,7 @@
 		</div>
 	</section>
 
-	<footer class="footer">
+	<footer  id="abo" class="footer">
 		<div class="container">
 			<div class="footer__wrapper">
 
@@ -386,45 +386,6 @@
 
 		</div>
 	</footer>
-
-
-
-
-
-	<div class="overlay2">
-		<div class="modal" id="consultation">
-			<div class="modal__close">&times;</div>
-			<div class="modal__subtitle">Заполните форму заявки</div>
-			<div class="modal__descr">и мы перезвоним вам в течении 10 минут</div>
-			<form action="#" class="form form__modal" method="POST">
-				<div class="form__item form__item-name">
-					<input class="input input-name" type="text" data-validate-field="name" name="Имя" placeholder="Введите имя">
-				</div>
-				<div class="form__item form__item-mail">
-					<input class="input input-mail" type="email" data-validate-field="email" name="Email"
-					placeholder="Введите email">
-				</div>
-				<div class="form__item form__item-tel">
-					<input class="input input-tel" type="tel" data-validate-field="tel" name="Телефон"
-					placeholder="Введите телефон">
-				</div>
-				<div class="form__btn form__btn-modal">
-					<button class="btn button_submit">Отправить заявку</button>
-				</div>
-				<div class="form__policy form__policy-modal">
-					<input id="formAgreement" checked type="checkbox" name="agreement" class="form__policy-input input-policy">
-					<label for="formAgreement" class="form__policy-label"><span><font color="red">*</font>I Agree to <a href="/policy.html">Privacy Policy</a></span></label>
-				</div> 				
-			</form>
-		</div>
-
-		<div class="modal modal_mini" id="thanks">
-			<div class="modal__close">&times;</div>
-			<div class="modal__subtitle">Спасибо за вашу заявку!</div>
-			<div class="modal__descr">Наш менеджер свяжется с вами 
-				в ближайшее время!</div>
-		</div>
-	</div>	
 
     <a href="#up" class="pageup">
 		<img src="icons/up-del.svg" alt="up">

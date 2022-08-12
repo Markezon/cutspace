@@ -74,22 +74,6 @@ inputMask.mask(telSelector);
 const validation = new JustValidate('.form');
 
 validation
-  .addField('.input-name', [
-    {
-      rule: 'minLength',
-      value: 2,
-      errorMessage: 'minimum of 2 characters'
-    },
-    {
-      rule: 'maxLength',
-      value: 30,
-    },
-    {
-      rule: 'required',
-      value: true,
-      errorMessage: 'Введите имя!'
-    }
-  ])
   .addField('.input-policy', [
     {
       rule: 'required',
@@ -153,11 +137,51 @@ validation
   const swiper = new Swiper('.swiper', {
     // Optional parameters
     loop: true,
-    slidesPerView: 3,
+    slidesPerView: 1,
     spaceBetween: 30,
     centeredSlides: true,
     autoplay: {
       delay: 3000,
     },
+    breakpoints: {
+      1120: {
+        slidesPerView: 3,
+      },
+      768: {
+        slidesPerView: 2,
+      }
+    }
   
   });
+
+
+
+
+
+
+$(document).ready(function(){
+
+
+  //scroll
+
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 1000) {
+      $('.pageup').fadeIn();
+    } else {
+      $('.pageup').fadeOut();
+    }
+  });
+  
+  $("a[href^='#']").click(function(){
+    const _href = $(this).attr("href");
+    $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
+    return false;
+  });
+
+  $("a[href^='#']").click(function(){
+    const _href = $(this).attr("href");
+    $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
+    return false;
+  });
+
+});

@@ -1,9 +1,14 @@
 .share {
     margin-top: 100px;
     &__company {
-        height: 42px;
+        min-height: 52px;
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
+        &_logo {
+            height: 52px;
+            padding: 5px 0;
+        }
     }
     &__wrapper {
         margin-top: 50px;
